@@ -24,8 +24,8 @@ public class RandomGenTest {
         int result = r.nextInt(50);
         int min = 0;
         int max = 50;
-        assertTrue(result < min);
-        assertTrue(result > 50);
+        assertFalse(result < min);
+        assertFalse(result > 50);
     }
 
     @Test
@@ -51,8 +51,8 @@ public class RandomGenTest {
     for (int i = 0; i < 3; i++){
         randomInt = r.nextInt(50);
         sum = sum + randomInt;
-        assertFalse(sum < 30);
-        assertFalse(sum > 0);
+        assertFalse(sum > 150);
+        assertFalse(sum < 0);
     }
 }
 }
